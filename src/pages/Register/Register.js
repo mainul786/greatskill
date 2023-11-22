@@ -3,7 +3,7 @@ import { AuthContext } from '../../context/UserContext/UserContext';
 
 
 const Register = () => {
-const {createUser} = useContext(AuthContext);
+const {createUser, googleLogin} = useContext(AuthContext);
 
 const handleSubmit = event =>{
     event.preventDefault();
@@ -23,6 +23,15 @@ const handleSubmit = event =>{
     })
     .catch(error => console.error(error))
 
+};
+
+const handleGoogleSignIn = () =>{
+  googleLogin()
+  .then(result => {
+    const user = result.user;
+    console.log(user);
+  })
+  .catch(error => console.error(error))
 }
 
     return (
@@ -32,7 +41,7 @@ const handleSubmit = event =>{
             <h1 className="text-5xl font-bold text-center">Register Here!</h1>
             
           </div>
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card shrink-0 w-full p-6  max-w-sm shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -63,6 +72,9 @@ const handleSubmit = event =>{
                 <button className="btn btn-primary">Register</button>
               </div>
             </form>
+            <div className="form-control mt-6">
+                <button onClick={handleGoogleSignIn} className="btn btn-primary">Google SignIn</button>
+              </div>
           </div>
         </div>
       </div>
