@@ -22,6 +22,7 @@ const Header = () => {
                 ?
                 <>
                     <span>{user?.displayName}</span>
+                    
                     <button onClick={handleSignOut}>LogOut</button>
                 </>
                 :

@@ -3,7 +3,7 @@ import { AuthContext } from '../../context/UserContext/UserContext';
 
 
 const Register = () => {
-const {createUser, googleLogin} = useContext(AuthContext);
+const {createUser, googleLogin, updateUserProfile} = useContext(AuthContext);
 
 const handleSubmit = event =>{
     event.preventDefault();
@@ -24,6 +24,7 @@ const handleSubmit = event =>{
     .catch(error => console.error(error))
 
 };
+
 
 const handleGoogleSignIn = () =>{
   googleLogin()
