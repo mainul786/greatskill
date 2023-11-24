@@ -3,7 +3,8 @@ import { AuthContext } from '../../context/UserContext/UserContext';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
-  const {logIn} = useContext(AuthContext);
+  const {logIn, user} = useContext(AuthContext);
+
 const handleSubmit = event =>{
     event.preventDefault();
     const form = event.target;

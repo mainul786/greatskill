@@ -9,10 +9,7 @@ const Header = () => {
 
     const handleSignOut = () => {
         logOut()
-            .then(result => {
-                const user = result.user;
-                console.log(user)
-            })
+            .then(()=>{})
             .catch(error => console.error(error));
     }
 
@@ -23,6 +20,7 @@ const Header = () => {
                     <img src={gSkill} alt='' className='h-9 rounded-lg' />
                 </Link>
                 <Link to='/' className='text-2xl px-4'>Home</Link>
+                <Link to='/blog' className='text-2xl px-4'>Blog</Link>
             </div>
             <div>
                 {user?.uid
