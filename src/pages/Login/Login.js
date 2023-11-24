@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../context/UserContext/UserContext';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const {logIn} = useContext(AuthContext);
@@ -47,6 +48,7 @@ const handleSubmit = event =>{
                 <button className="btn btn-primary">Login</button>
               </div>
             </form>
+            <p className='p-4'>Please Goto Register--<Link to='/register'>Register!</Link></p>
           </div>
         </div>
       </div>

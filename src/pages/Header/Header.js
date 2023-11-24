@@ -28,9 +28,9 @@ const Header = () => {
                 {user?.uid
                     ?
                     <>
-                        <span>{user?.displayName}</span>
-
-                        <button onClick={handleSignOut}>LogOut</button>
+                        <span className='p-4'>{user?.displayName}</span>
+                        <img src={user?.photoURL} className='h-8 rounded-full' alt='' />
+                        <button onClick={handleSignOut} className='mx-3'>LogOut</button>
                     </>
                     :
                     <div>
