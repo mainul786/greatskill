@@ -12,12 +12,10 @@ const LeftSideNav = () => {
    
     return (
         <div>
-            <h1 className='text-3xl'>All Courses</h1>
-        <div>
         {
-            courses.map(course =><p key={course.id}> <Link  to={`/courses/${course.id}`}>{course?.name}</Link></p>)
+            courses.map(course =><p key={course.id}><Link  to={`/courses/${course.id}`}> {course?.name}</Link></p>)
         }
-        </div>
+       
         </div>
     );
 };

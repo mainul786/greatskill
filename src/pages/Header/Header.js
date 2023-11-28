@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/UserContext/UserContext';
 import gSkill from '../../assest/images/gSkill.jpg';
+import Courses from './../Courses/Courses';
 
 
 const Header = () => {
@@ -19,7 +20,7 @@ const Header = () => {
                 <Link to='/' className="text-3xl">
                     <img src={gSkill} alt='' className='h-9 rounded-lg' />
                 </Link>
-                <Link to='/' className='text-2xl px-4'>Home</Link>
+                <Link to='/' className='text-2xl px-4'>Course</Link>
                 <Link to='/blog' className='text-2xl px-4'>Blog</Link>
             </div>
             <div>
