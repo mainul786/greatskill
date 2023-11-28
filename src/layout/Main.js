@@ -9,7 +9,7 @@ const Main = () => {
         <div>
             <Header></Header>
             <div className='flex'>
-                <div>
+                <div >
                     <LeftSideNav></LeftSideNav>
                 </div>
                 <div >
