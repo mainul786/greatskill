@@ -1,12 +1,20 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from '../pages/Header/Header';
+import LeftSideNav from '../pages/LeftSideNav/LeftSideNav';
 
 const Main = () => {
     return (
         <div>
             <Header></Header>
-            <Outlet></Outlet>
+            <div className='flex'>
+                <div>
+                    <LeftSideNav></LeftSideNav>
+                </div>
+                <div>
+                    <Outlet></Outlet>
+                </div>
+            </div>
         </div>
     );
 };

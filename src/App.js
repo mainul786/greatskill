@@ -7,6 +7,8 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Blog from './pages/Blog/Blog';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
+import Courses from './pages/Courses/Courses';
+
 
 const router = createBrowserRouter([
   {
@@ -15,7 +17,13 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader:()=>fetch(`http://localhost:5000/courses`)
+      },
+      {
+        path:'/courses/:id',
+        element:<Courses></Courses>,
+        loader:({params})=>fetch(`http://localhost:5000/courses/${params.id}`)
       },
       {
         path: 'register',
@@ -29,6 +37,7 @@ const router = createBrowserRouter([
         path:'/blog',
         element:<Blog></Blog>
       },
+    
       {
         path:'*',
         element:<PageNotFound></PageNotFound>
@@ -41,7 +50,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div>
       <RouterProvider router={router}></RouterProvider>
     </div>
   );
