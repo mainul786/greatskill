@@ -8,6 +8,8 @@ import Register from './pages/Register/Register';
 import Blog from './pages/Blog/Blog';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 import Courses from './pages/Courses/Courses';
+import Topic from './pages/Topic/Topic';
+import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 
 
 const router = createBrowserRouter([
@@ -24,6 +26,11 @@ const router = createBrowserRouter([
         path:'/courses/:id',
         element:<Courses></Courses>,
         loader:({params})=>fetch(`http://localhost:5000/courses/${params.id}`)
+      },
+      {
+        path:'/topic/:id',
+        element:<PrivateRoute><Topic></Topic></PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/topic/${params.id}`)
       },
       {
         path: 'register',

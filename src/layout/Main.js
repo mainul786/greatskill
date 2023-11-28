@@ -7,7 +7,7 @@ const Main = () => {
     return (
         <div>
             <Header></Header>
-            <div className='flex'>
+            <div>
                 <div>
                     <LeftSideNav></LeftSideNav>
                 </div>
