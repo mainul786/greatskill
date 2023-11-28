@@ -8,7 +8,7 @@ const Courses = () => {
     return (
         <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4 mt-6 ml-4'>
             {
-                topics.map(topic =><CardSummary key = {topic._id}
+                topics.map(topic =><CardSummary key = {topic.id}
                 topic = {topic}
                 ></CardSummary>)
             }
