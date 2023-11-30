@@ -1,4 +1,11 @@
 # Getting Started with Create React App
+*Create signup page with google firebase 
+*SignIn with firebase base 
+*Signin in with Google Sign in
+*React router
+*tailwind css 
+*Toogle Picture and logout 
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
