@@ -20,17 +20,17 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader:()=>fetch(`http://localhost:5000/topic`)
+        loader:()=>fetch(`https://greatskill-server.vercel.app/topic`)
       },
       {
         path:'/courses/:id',
         element:<Courses></Courses>,
-        loader:({params})=>fetch(`http://localhost:5000/courses/${params.id}`)
+        loader:({params})=>fetch(`https://greatskill-server.vercel.app/courses/${params.id}`)
       },
       {
         path:'/topic/:id',
         element:<PrivateRoute><Topic></Topic></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/topic/${params.id}`)
+        loader: ({params}) => fetch(`https://greatskill-server.vercel.app/topic/${params.id}`)
       },
       {
         path: 'register',
